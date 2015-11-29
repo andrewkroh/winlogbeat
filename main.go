@@ -8,6 +8,10 @@ import (
 	winlogbeat "github.com/elastic/winlogbeat/beat"
 )
 
+// Depends on go get github.com/josephspurrier/goversioninfo/cmd/goversioninfo
+// Run go generate after updating the version number.
+//go:generate goversioninfo -icon=beats.ico -ver-major=0 -ver-minor=0 -ver-patch=1
+
 // Version of winlogbeat.
 var Version = "0.0.1"
 

@@ -6,6 +6,7 @@ include scripts/Makefile
 
 .PHONY: gen
 gen: 
+	go get github.com/josephspurrier/goversioninfo/cmd/goversioninfo
 	GOOS=windows GOARCH=386 godep go generate -v -x ./...
 
 # This is called by the beats-packer to obtain the configuration file and
